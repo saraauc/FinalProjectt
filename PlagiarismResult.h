@@ -3,14 +3,11 @@
 using namespace std;
 class PlagiarismResult{
 	private:
-		string original_doc;
-		string matched_doc;
-		int similarity;
-		public:
-			PlagiarismResult();
-			PlagiarismResult(const string& orig, const string& match, int sim); 
-			~PlagiarismResult();
-			const string& get_original_doc()const; 
-			const string &get_matched_doc()const; 
-			int get_similarity()const;
-			};
+		string originalDoc; 
+		vector<string> plagiarizedDocs;
+	public:
+		string getDocument(); 
+		void addPlagiarizedDoc(string docPath); 
+		string getOriginalDocl(); 
+		vector<string>getPlagiarizedDocs(); 
+		}; 

@@ -5,10 +5,13 @@ using namespace std;
 
 class Corpus{
 	private:
-		vector<string>documents;
-		public:
-			Corpus();
-			Corpus(const vector<string>&docs);
-			void add_documents(const string& doc); 
-			const vector<string>&get_documents()const;
+		vector<string>sentence;
+	public:
+		Corpus();
+		~Corpus();
+		Corpus(const vector<string>&docs);
+		void removeDocument(const string& doc); 
+		void addDocument(const string& doc);
+		void clearDocuments();
+		vector<string>getDocuments();
 };
